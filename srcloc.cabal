@@ -1,0 +1,16 @@
+name:               srcloc
+version:            0.0.1
+license:            BSD
+author:             Dan Rosén
+maintainer:         Dan Rosén <danr@chalmers.se>
+build-type:         Simple
+cabal-version:      >= 1.6
+
+library
+    ghc-options:    -Wall -package ghc
+
+    exposed-modules:
+        Plugin
+
+    build-depends:
+        base
