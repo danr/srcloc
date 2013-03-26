@@ -25,9 +25,9 @@ install _ todo = do
 
 srcLocPass :: [CoreBind] -> CoreM [CoreBind]
 srcLocPass binds = do
-    liftIO $ putStrLn (showSDoc (ppr binds))
+    liftIO $ putStrLn (shw binds)
     binds' <- addBndrs <=< addLocs $ binds
-    liftIO $ putStrLn (showSDoc (ppr binds'))
+    liftIO $ putStrLn (shw binds')
     return binds'
 
 addLocs :: [CoreBind] -> CoreM [CoreBind]
