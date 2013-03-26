@@ -133,5 +133,9 @@ varString :: Var -> String
 varString = occNameString . nameOccName . varName
 
 shw :: Outputable a => a -> String
+#if __GLASGOW_HASKELL__ >= 706
+shw = showSDoc tracingDynFlags . ppr
+#else
 shw = showSDoc . ppr
+#endif
 
