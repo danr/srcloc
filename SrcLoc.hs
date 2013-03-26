@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 module SrcLoc (plugin) where
 
 import CoreSyn
