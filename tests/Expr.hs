@@ -1,14 +1,5 @@
 module Expr where
 
-
-{-
-class Locationable a where
-     loc :: a -> SrcLoc -> a
-
-class Bindable a where
-     bind :: a -> String -> a
-     -}
-
 data SrcLoc = SrcLoc String Int Int
 
 instance Show SrcLoc where
@@ -41,21 +32,4 @@ hlam = HLam Nothing Nothing
 
 ($$) :: HExpr -> HExpr -> HExpr
 ($$) = HApp Nothing
-
-
-{-
-data Expr
-    = Lam String Expr
-    | Var String
-    | App Expr Expr
-  deriving Show
-
-test :: Expr
-test = App test test'
-  where test' = App test' test'
-  -}
-
-
-{-
-    -}
 
