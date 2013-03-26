@@ -1,6 +1,6 @@
 name:               srcloc
 version:            0.0.1
-license:            BSD
+license:            BSD3
 author:             Dan Rosén
 maintainer:         Dan Rosén <danr@chalmers.se>
 build-type:         Simple
@@ -10,7 +10,7 @@ library
     ghc-options:    -Wall -package ghc
 
     exposed-modules:
-        Plugin
+        SrcLoc
 
     build-depends:
         base
